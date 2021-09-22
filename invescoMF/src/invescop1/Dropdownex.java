@@ -27,14 +27,14 @@ public class Dropdownex {
 		
 		Select s = new Select(e1);
 		
-		int a = s.getOptions().size();
+		//int a = s.getOptions().size();
 		
-		System.out.println(a);
+		//System.out.println(a);
 		
 		
 		//To print the text of the drop down items
 		
-		List<WebElement> l1 = driver.findElements(By.tagName("select"));
+		List<WebElement> l1 = s.getOptions();
 		
 		
 		System.out.println(l1.size());
@@ -47,7 +47,7 @@ public class Dropdownex {
 		   
 		
 		   
-		   /*if(l1.get(i).getText().equals("Music"))
+		   if(x.equals("Music"))
 			   
 		   {
 		   	 System.out.println("Item found");
@@ -56,7 +56,7 @@ public class Dropdownex {
 		   else
 		   {
 			   System.out.println("Item not found");
-		   }*/
+		   }
 		}
 		
 	}

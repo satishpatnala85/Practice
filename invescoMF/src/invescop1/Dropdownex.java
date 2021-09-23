@@ -19,6 +19,8 @@ public class Dropdownex {
 		
 		driver.get("https://www.ebay.com/");
 		
+		 String x= null;
+		
 		Thread.sleep(5000);
 		
 		//Number of items in the dropdown
@@ -39,15 +41,15 @@ public class Dropdownex {
 		
 		System.out.println(l1.size());
 		
+		 
+		
 		for(int i=0;i<l1.size();i++)
 		{
-		   String x =l1.get(i).getText();
+		    x =l1.get(i).getText();
 		   
 		   System.out.println(x);
 		   
-		
-		   
-		   if(x.equals("Music"))
+           if(x.equals("Music"))
 			   
 		   {
 		   	 System.out.println("Item found");
@@ -57,7 +59,10 @@ public class Dropdownex {
 		   {
 			   System.out.println("Item not found");
 		   }
+		   
 		}
+		
+		
 		
 	}
 

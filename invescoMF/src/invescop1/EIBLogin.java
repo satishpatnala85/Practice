@@ -7,15 +7,27 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class EIBLogin {
+	
+	public WebDriver launchSite(String launchurl)
+	{
+        WebDriver driver = new ChromeDriver();
+		
+		driver.get(launchurl);
+		
+		return driver;
+	}
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		System.setProperty("webdriver.chrome.driver","D:\\SWS\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver","D:\\SWS\\chromedriver.exe");
 		
-		WebDriver driver = new ChromeDriver();
+		EIBLogin eib = new EIBLogin();
 		
-		driver.get("https://sitkboltnext.kfintech.com/kboltnext/");
+		WebDriver driver = eib.launchSite("https://sitkboltnext.kfintech.com/kboltnext/");
+		
+		
 		
 		WebElement uid = driver.findElement(By.id("txtLoginId"));
 		
@@ -34,6 +46,10 @@ public class EIBLogin {
 		WebElement login = driver.findElement(By.id("imgSubmit"));
 		
 		login.click();
+		
+		//EIBLogin login = new EIBLogin();
+		
+		//login.launchSite();
 
 	}
 
